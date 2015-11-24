@@ -61,6 +61,7 @@ namespace LifeInEsbjergDAL.Repository
             {
                 var companyDB = ctx.Companies.FirstOrDefault(x => x.Id == company.Id);
 
+                companyDB.CVR = company.CVR;
                 companyDB.Name = company.Name;
                 companyDB.ImageUrl = company.ImageUrl;
                 companyDB.Address = company.Address;
