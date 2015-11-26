@@ -64,6 +64,7 @@
     <Compile Include="Repository\CompanyRepository.cs" />
     <Compile Include="Repository\Interface\IRepository.cs" />
     <Compile Include="Repository\RatingRepository.cs" />
+    <Compile Include="Repository\TagRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

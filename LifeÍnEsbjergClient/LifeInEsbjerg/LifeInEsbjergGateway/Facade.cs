@@ -17,5 +17,10 @@ namespace LifeInEsbjergGateway
         {
             return new CategoryGatewayService();
         }
+
+        public TagGatewayService GetTagGateway()
+        {
+            return new TagGatewayService();
+        }
     }
 }

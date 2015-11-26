@@ -13,6 +13,11 @@ namespace LifeInEsbjerg.Models.ViewModel
         public SelectList Category { get; set; }
 
         public int selectedCat { get; set; }
+
+
+        public MultiSelectList Tags { get; set; }
+
+        public List<int> selectedTags { get; set; }
     }
 
 }

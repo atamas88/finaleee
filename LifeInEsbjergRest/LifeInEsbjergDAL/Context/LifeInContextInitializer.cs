@@ -31,6 +31,7 @@ namespace LifeInEsbjergDAL.Context
             Review rev1 = context.Reviews.Add(new Review() { Id = 1, Title = "Great Stuff", Text = "I like the overall experience" });
             Review rev2 = context.Reviews.Add(new Review() { Id = 2, Title = "Awfull", Text = "Very very bad experience" });
 
+            Tag tag1 = context.Tags.Add(new Tag() { Id = 1, Name = "Test" });
             //Customer customer1 = context.Customers.Add(new Customer() { Id = 1, Name = "Kim Cormen", Email = "Google@google.tinfoil", Password = "1234abcd" });
 
             companies.Add(new Company()
@@ -47,7 +48,8 @@ namespace LifeInEsbjergDAL.Context
                 Description = "Small local bank",
                 Category = category1,
                 Ratings = new List<Rating>() { rating1, rating2 },
-                Reviews = new List<Review>() { rev1, rev2 }
+                Reviews = new List<Review>() { rev1, rev2 },
+                Tags = new List<Tag>() { tag1}
 
             });
             companies.Add(new Company()

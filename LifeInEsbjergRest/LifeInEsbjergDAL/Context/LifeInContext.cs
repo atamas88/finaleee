@@ -20,14 +20,15 @@ namespace LifeInEsbjergDAL.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Category>().HasMany(c => c.Companies);
-            //modelBuilder.Entity<Company>().HasMany(c => c.Ratings);
-            //modelBuilder.Entity<Company>().HasMany(c => c.Reviews);
+            
+            modelBuilder.Entity<Company>().HasMany(c => c.Tags).WithMany();
         }
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<Review> Reviews { get; set; }
+
+        public DbSet<Tag> Tags { get; set; }
     }
 }

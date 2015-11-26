@@ -19,7 +19,7 @@ namespace LifeInEsbjerg.Controllers
         public ActionResult Index()
         {
             IEnumerable<Company> companies = facade.GetCompanyGateway().ReadAll();
-            
+
             Debug.WriteLine(companies);
             return View(companies);
 
@@ -34,7 +34,8 @@ namespace LifeInEsbjerg.Controllers
 
         public ActionResult Create()
         {
-            var model = new LifeInEsbjergViewModel() { Category = new SelectList(facade.GetCategoryGateway().ReadAll(), "Id", "Name") };
+            var model = new LifeInEsbjergViewModel() { Category = new SelectList(facade.GetCategoryGateway().ReadAll(), "Id", "Name"),
+                                                        Tags = new MultiSelectList(facade.GetTagGateway().ReadAll(), "Id", "Name")};
             return View(model);
         }
         [HttpPost]

@@ -12,7 +12,7 @@ namespace LifeInEsbjergRest1.Controllers
     public class CategoryController : ApiController
     {
         private Facade facade = new Facade();
-        public IEnumerable<Category> GetCompanies()
+        public IEnumerable<Category> GetCategories()
         {
             return facade.GetCategoryRepository().ReadAll();
         }
